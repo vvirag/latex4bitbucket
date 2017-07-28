@@ -37,7 +37,7 @@ pipelines:
           - gdcp upload -p $GDCP_FOLDER ./$dirname
           - echo "Publishing on Google Drive done!"
 ```
-1. On bitbucket, go for `Settings/Pipeline/Environment` variables
+1. On bitbucket, go for `Settings/Pipeline/Environment variables`
 1. Add two variables with the name of `GDCP_CLIENT_SECRETS` and `GDCP_CREDENTIALS`. Copy the content of your local `~/.gdcp/client_secrets.json` and `~/.gdcp/credentials.json` files (generated during the **Prerequisite: setup gdcp on your local system** step earlier in this description.) into the value fields.
 1. Add `GDCP_FOLDER` variable. The value should be the Google Drive folder ID that was noted during the **Prerequisite: setup gdcp on your local system** step earlier in this description.
 
