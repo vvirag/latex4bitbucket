@@ -1,7 +1,9 @@
 # latex4bitbucket
 Dockerfile for latex4bitbucket image: Ubuntu image with texlive and gdcp (google drive copy).
+
 Intended to use from bitbucket pipeline to automate build for latex projects.
-Since bitbucket pipeline does not keep artifacts, this image includes gdcp to automatically copy the generated files to a Google Drive folder.
+
+Since bitbucket pipeline does not keep artifacts, this image includes gdcp to be able to automatically copy the generated files to a Google Drive folder.
 
 
 ## Prerequisite: setup gdcp on your local system
