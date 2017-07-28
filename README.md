@@ -16,7 +16,7 @@ To generate and setup the necessary credentials to reach Google Drive, first you
 1. You need this ID later to be able to use gdcp.
 1. Continue with the setup steps at https://github.com/ctberthiaume/gdcp
 
-## Set up bitbucket pipeline
+## Setup bitbucket pipeline
 The goal is to setup an automated build system for a latex project that not only compiles latex, but also copies the generated output to a given Google Drive folder. The example configuration below generates a `build-YYYYmmDD_HHMMSS` subfolder under the remote Google Drive folder, and copies there the generated `.pdf`, `.log`, and `.bbl` files.
 
 1. Enable pipeline on your bitbucket project
