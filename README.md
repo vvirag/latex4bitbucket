@@ -5,6 +5,7 @@ Intended to use from bitbucket pipeline to automate build for latex projects.
 
 Since bitbucket pipeline does not keep artifacts, this image includes gdcp to be able to automatically copy the generated files to a Google Drive folder.
 
+The docker image is availabe here: https://hub.docker.com/r/vvirag/latex4bitbucket/
 
 ## Prerequisite: setup gdcp on your local system
 To generate and setup the necessary credentials to reach Google Drive, first you have to generate these on your local machine.
