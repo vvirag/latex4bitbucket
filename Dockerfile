@@ -1,20 +1,15 @@
-FROM ubuntu:17.04
-MAINTAINER Virag Varga <virag.varga.it@gmail.com>
+FROM ubuntu:latest
+MAINTAINER Sebastian Lohr <kontakt@sebastian-lohr.de>
 ENV DEBIAN_FRONTEND noninteractive
 
 # update software repository
-RUN apt-get update -q
+RUN apt-get update
 
 # install latex
 RUN apt-get install -qy \
-	texlive-latex-extra  \
-	texlive-fonts-extra  \
-	texlive-bibtex-extra  \
-	texlive-extra-utils \
-    texlive-science
-    
-# install some additional tools    
-RUN apt-get install -qy make latexmk git 
+	texlive-base \
+	texlive-lang-german \
+	biber 
     
 # install python and gdcp prerequisites
 RUN apt-get install -qy python python-pip
