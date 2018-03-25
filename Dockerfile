@@ -10,10 +10,6 @@ RUN apt-get install -qy \
 	texlive-base \
 	texlive-lang-german \
 	biber 
-	
-    
-# install some additional tools    
-RUN apt-get install -qy make latexmk git 
     
 # install python and gdcp prerequisites
 RUN apt-get install -qy python python-pip
