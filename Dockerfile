@@ -1,4 +1,4 @@
-FROM ubuntu:17.04
+FROM ubuntu:18.04
 MAINTAINER Virag Varga <virag.varga.it@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -7,26 +7,22 @@ RUN apt-get update -q
 
 # install latex
 RUN apt-get install -qy \
-	texlive-latex-extra  \
-	texlive-fonts-extra  \
-	texlive-bibtex-extra  \
-	texlive-extra-utils \
-    texlive-science
-    
-# install some additional tools    
-RUN apt-get install -qy make latexmk git 
-    
+	texlive-full
+
+# install some additional tools
+RUN apt-get install -qy make latexmk git
+
 # install python and gdcp prerequisites
 RUN apt-get install -qy python python-pip
 RUN pip install pydrive && pip install backoff
-RUN pip install --upgrade google-api-python-client 
+RUN pip install --upgrade google-api-python-client
 
 # install gdcp
 RUN mkdir -p /usr/src/gdcp \
 	&& cd /usr/src/ \
 	&& git clone https://github.com/ctberthiaume/gdcp.git \
 	&& cp gdcp/gdcp /usr/bin
-	
+
 # prepare gdcp config dir
 RUN mkdir $HOME/.gdcp
 
