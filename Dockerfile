@@ -1,5 +1,5 @@
-MAINTAINER Virag Varga <virag.varga.it@gmail.com>
 FROM ubuntu:18.04
+MAINTAINER Virag Varga <virag.varga.it@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 
 # update software repository
